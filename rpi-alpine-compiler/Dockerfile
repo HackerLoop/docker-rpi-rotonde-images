@@ -18,6 +18,4 @@ RUN 	apk update && \
 	
 RUN mkdir /sources
 
-VOLUME sources
-
 ENTRYPOINT ["/bin/bash"]

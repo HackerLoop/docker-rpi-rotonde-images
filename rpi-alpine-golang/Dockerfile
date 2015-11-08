@@ -23,6 +23,4 @@ ENV GOPATH /gopath
 ENV PATH $GOPATH/bin:$PATH
 ENV GOROOT /go
 
-VOLUME /golang
-
 ENTRYPOINT ["/bin/bash"]
