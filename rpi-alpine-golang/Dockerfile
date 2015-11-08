@@ -8,6 +8,7 @@ RUN 	apk update && \
 	apk add make && \
 	apk add bash && \
 	apk add musl-dev && \
+	apk add git && \
 	curl http://dave.cheney.net/paste/go-linux-arm-bootstrap-c788a8e.tbz | tar xj && \
 	curl https://storage.googleapis.com/golang/go1.5.src.tar.gz | tar xz && \
 	cd /go/src/ && \
@@ -19,5 +20,7 @@ RUN 	apk update && \
 RUN mkdir gopath
 
 ENV GOPATH /gopath
+ENV PATH $GOPATH/bin:$PATH
+ENV GOROOT /go
 
 ENTRYPOINT ["/bin/bash"]
